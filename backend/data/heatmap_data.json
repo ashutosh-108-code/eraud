@@ -1,0 +1,573 @@
+{
+  "summary": {
+    "total_transactions": 250000,
+    "total_fraud": 480,
+    "overall_fraud_rate": 0.192,
+    "states_affected": 10,
+    "peak_fraud_hour": 19,
+    "worst_state": "Maharashtra",
+    "riskiest_age_group": "18-25",
+    "most_fraud_bank": "SBI",
+    "date_range_start": "2024-01-01",
+    "date_range_end": "2024-12-30",
+    "total_fraud_amount": 719631.0,
+    "avg_fraud_amount": 1499.23,
+    "weekend_fraud_rate": 0.2,
+    "weekday_fraud_rate": 0.189
+  },
+  "states": [
+    {
+      "sender_state": "Andhra Pradesh",
+      "total_transactions": 20006,
+      "fraud_count": 35,
+      "total_amount": 25952619,
+      "avg_amount": 1297.24177746676,
+      "fraud_amount": 71848,
+      "fraud_rate": 0.175,
+      "risk_level": "medium",
+      "lat": 15.91,
+      "lng": 79.73,
+      "top_fraud_type": "P2M",
+      "top_merchant_category": "Grocery"
+    },
+    {
+      "sender_state": "Delhi",
+      "total_transactions": 24870,
+      "fraud_count": 50,
+      "total_amount": 32689865,
+      "avg_amount": 1314.429634097306,
+      "fraud_amount": 83675,
+      "fraud_rate": 0.201,
+      "risk_level": "high",
+      "lat": 28.7,
+      "lng": 77.1,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Food"
+    },
+    {
+      "sender_state": "Gujarat",
+      "total_transactions": 20061,
+      "fraud_count": 43,
+      "total_amount": 25988190,
+      "avg_amount": 1295.4583520263197,
+      "fraud_amount": 69254,
+      "fraud_rate": 0.214,
+      "risk_level": "medium",
+      "lat": 22.25,
+      "lng": 71.19,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Food"
+    },
+    {
+      "sender_state": "Karnataka",
+      "total_transactions": 29756,
+      "fraud_count": 69,
+      "total_amount": 38451158,
+      "avg_amount": 1292.2152843124077,
+      "fraud_amount": 55459,
+      "fraud_rate": 0.232,
+      "risk_level": "high",
+      "lat": 15.31,
+      "lng": 75.71,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Grocery"
+    },
+    {
+      "sender_state": "Maharashtra",
+      "total_transactions": 37427,
+      "fraud_count": 71,
+      "total_amount": 49043948,
+      "avg_amount": 1310.3895049028777,
+      "fraud_amount": 96259,
+      "fraud_rate": 0.19,
+      "risk_level": "high",
+      "lat": 19.75,
+      "lng": 75.71,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Grocery"
+    },
+    {
+      "sender_state": "Rajasthan",
+      "total_transactions": 19981,
+      "fraud_count": 46,
+      "total_amount": 26730470,
+      "avg_amount": 1337.7944046844502,
+      "fraud_amount": 80346,
+      "fraud_rate": 0.23,
+      "risk_level": "medium",
+      "lat": 27.02,
+      "lng": 74.21,
+      "top_fraud_type": "P2M",
+      "top_merchant_category": "Grocery"
+    },
+    {
+      "sender_state": "Tamil Nadu",
+      "total_transactions": 25367,
+      "fraud_count": 40,
+      "total_amount": 33343518,
+      "avg_amount": 1314.444672211929,
+      "fraud_amount": 58380,
+      "fraud_rate": 0.158,
+      "risk_level": "medium",
+      "lat": 11.12,
+      "lng": 78.65,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Fuel"
+    },
+    {
+      "sender_state": "Telangana",
+      "total_transactions": 22435,
+      "fraud_count": 39,
+      "total_amount": 29750930,
+      "avg_amount": 1326.0944952083798,
+      "fraud_amount": 51819,
+      "fraud_rate": 0.174,
+      "risk_level": "medium",
+      "lat": 18.11,
+      "lng": 79.01,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Other"
+    },
+    {
+      "sender_state": "Uttar Pradesh",
+      "total_transactions": 30125,
+      "fraud_count": 52,
+      "total_amount": 40035717,
+      "avg_amount": 1328.9864564315353,
+      "fraud_amount": 76482,
+      "fraud_rate": 0.173,
+      "risk_level": "high",
+      "lat": 26.84,
+      "lng": 80.94,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Food"
+    },
+    {
+      "sender_state": "West Bengal",
+      "total_transactions": 19972,
+      "fraud_count": 35,
+      "total_amount": 25952594,
+      "avg_amount": 1299.4489284999,
+      "fraud_amount": 76109,
+      "fraud_rate": 0.175,
+      "risk_level": "medium",
+      "lat": 22.98,
+      "lng": 87.85,
+      "top_fraud_type": "P2P",
+      "top_merchant_category": "Grocery"
+    }
+  ],
+  "hourly": [
+    {
+      "hour": 0,
+      "fraud_count": 8,
+      "total": 3388,
+      "fraud_rate": 0.236
+    },
+    {
+      "hour": 1,
+      "fraud_count": 6,
+      "total": 2244,
+      "fraud_rate": 0.267
+    },
+    {
+      "hour": 2,
+      "fraud_count": 3,
+      "total": 1685,
+      "fraud_rate": 0.178
+    },
+    {
+      "hour": 3,
+      "fraud_count": 4,
+      "total": 1314,
+      "fraud_rate": 0.304
+    },
+    {
+      "hour": 4,
+      "fraud_count": 1,
+      "total": 1247,
+      "fraud_rate": 0.08
+    },
+    {
+      "hour": 5,
+      "fraud_count": 1,
+      "total": 1742,
+      "fraud_rate": 0.057
+    },
+    {
+      "hour": 6,
+      "fraud_count": 5,
+      "total": 3501,
+      "fraud_rate": 0.143
+    },
+    {
+      "hour": 7,
+      "fraud_count": 13,
+      "total": 5630,
+      "fraud_rate": 0.231
+    },
+    {
+      "hour": 8,
+      "fraud_count": 18,
+      "total": 8349,
+      "fraud_rate": 0.216
+    },
+    {
+      "hour": 9,
+      "fraud_count": 20,
+      "total": 10450,
+      "fraud_rate": 0.191
+    },
+    {
+      "hour": 10,
+      "fraud_count": 20,
+      "total": 13904,
+      "fraud_rate": 0.144
+    },
+    {
+      "hour": 11,
+      "fraud_count": 27,
+      "total": 16328,
+      "fraud_rate": 0.165
+    },
+    {
+      "hour": 12,
+      "fraud_count": 30,
+      "total": 17516,
+      "fraud_rate": 0.171
+    },
+    {
+      "hour": 13,
+      "fraud_count": 25,
+      "total": 15038,
+      "fraud_rate": 0.166
+    },
+    {
+      "hour": 14,
+      "fraud_count": 21,
+      "total": 11472,
+      "fraud_rate": 0.183
+    },
+    {
+      "hour": 15,
+      "fraud_count": 32,
+      "total": 12624,
+      "fraud_rate": 0.253
+    },
+    {
+      "hour": 16,
+      "fraud_count": 31,
+      "total": 13992,
+      "fraud_rate": 0.222
+    },
+    {
+      "hour": 17,
+      "fraud_count": 37,
+      "total": 18340,
+      "fraud_rate": 0.202
+    },
+    {
+      "hour": 18,
+      "fraud_count": 31,
+      "total": 20064,
+      "fraud_rate": 0.155
+    },
+    {
+      "hour": 19,
+      "fraud_count": 43,
+      "total": 21232,
+      "fraud_rate": 0.203
+    },
+    {
+      "hour": 20,
+      "fraud_count": 37,
+      "total": 18506,
+      "fraud_rate": 0.2
+    },
+    {
+      "hour": 21,
+      "fraud_count": 35,
+      "total": 16253,
+      "fraud_rate": 0.215
+    },
+    {
+      "hour": 22,
+      "fraud_count": 23,
+      "total": 9364,
+      "fraud_rate": 0.246
+    },
+    {
+      "hour": 23,
+      "fraud_count": 9,
+      "total": 5817,
+      "fraud_rate": 0.155
+    }
+  ],
+  "transaction_types": [
+    {
+      "type": "Bill Payment",
+      "fraud_count": 77,
+      "total": 37368,
+      "fraud_rate": 0.206
+    },
+    {
+      "type": "P2M",
+      "fraud_count": 167,
+      "total": 87660,
+      "fraud_rate": 0.191
+    },
+    {
+      "type": "P2P",
+      "fraud_count": 206,
+      "total": 112445,
+      "fraud_rate": 0.183
+    },
+    {
+      "type": "Recharge",
+      "fraud_count": 30,
+      "total": 12527,
+      "fraud_rate": 0.239
+    }
+  ],
+  "age_groups": [
+    {
+      "age_group": "18-25",
+      "fraud_count": 143,
+      "total": 62345,
+      "fraud_rate": 0.229
+    },
+    {
+      "age_group": "26-35",
+      "fraud_count": 163,
+      "total": 87432,
+      "fraud_rate": 0.186
+    },
+    {
+      "age_group": "36-45",
+      "fraud_count": 116,
+      "total": 62873,
+      "fraud_rate": 0.184
+    },
+    {
+      "age_group": "46-55",
+      "fraud_count": 31,
+      "total": 24841,
+      "fraud_rate": 0.125
+    },
+    {
+      "age_group": "56+",
+      "fraud_count": 27,
+      "total": 12509,
+      "fraud_rate": 0.216
+    }
+  ],
+  "banks": [
+    {
+      "bank": "SBI",
+      "fraud_count": 109,
+      "total": 62693,
+      "fraud_rate": 0.174
+    },
+    {
+      "bank": "ICICI",
+      "fraud_count": 66,
+      "total": 29769,
+      "fraud_rate": 0.222
+    },
+    {
+      "bank": "HDFC",
+      "fraud_count": 62,
+      "total": 37485,
+      "fraud_rate": 0.165
+    },
+    {
+      "bank": "IndusInd",
+      "fraud_count": 52,
+      "total": 25173,
+      "fraud_rate": 0.207
+    },
+    {
+      "bank": "PNB",
+      "fraud_count": 52,
+      "total": 24946,
+      "fraud_rate": 0.208
+    },
+    {
+      "bank": "Kotak",
+      "fraud_count": 50,
+      "total": 20032,
+      "fraud_rate": 0.25
+    },
+    {
+      "bank": "Axis",
+      "fraud_count": 49,
+      "total": 25042,
+      "fraud_rate": 0.196
+    },
+    {
+      "bank": "Yes Bank",
+      "fraud_count": 40,
+      "total": 24860,
+      "fraud_rate": 0.161
+    }
+  ],
+  "merchant_categories": [
+    {
+      "category": "Grocery",
+      "fraud_count": 94,
+      "total": 49966,
+      "fraud_rate": 0.188
+    },
+    {
+      "category": "Food",
+      "fraud_count": 73,
+      "total": 37464,
+      "fraud_rate": 0.195
+    },
+    {
+      "category": "Shopping",
+      "fraud_count": 62,
+      "total": 29872,
+      "fraud_rate": 0.208
+    },
+    {
+      "category": "Other",
+      "fraud_count": 50,
+      "total": 24828,
+      "fraud_rate": 0.201
+    },
+    {
+      "category": "Fuel",
+      "fraud_count": 48,
+      "total": 25063,
+      "fraud_rate": 0.192
+    },
+    {
+      "category": "Transport",
+      "fraud_count": 43,
+      "total": 20105,
+      "fraud_rate": 0.214
+    },
+    {
+      "category": "Entertainment",
+      "fraud_count": 40,
+      "total": 20103,
+      "fraud_rate": 0.199
+    },
+    {
+      "category": "Utilities",
+      "fraud_count": 33,
+      "total": 22338,
+      "fraud_rate": 0.148
+    },
+    {
+      "category": "Healthcare",
+      "fraud_count": 21,
+      "total": 12663,
+      "fraud_rate": 0.166
+    },
+    {
+      "category": "Education",
+      "fraud_count": 16,
+      "total": 7598,
+      "fraud_rate": 0.211
+    }
+  ],
+  "days_of_week": [
+    {
+      "day": "Monday",
+      "fraud_count": 71,
+      "total": 36495,
+      "fraud_rate": 0.195,
+      "order": 0
+    },
+    {
+      "day": "Tuesday",
+      "fraud_count": 58,
+      "total": 35540,
+      "fraud_rate": 0.163,
+      "order": 1
+    },
+    {
+      "day": "Wednesday",
+      "fraud_count": 75,
+      "total": 35700,
+      "fraud_rate": 0.21,
+      "order": 2
+    },
+    {
+      "day": "Thursday",
+      "fraud_count": 72,
+      "total": 35432,
+      "fraud_rate": 0.203,
+      "order": 3
+    },
+    {
+      "day": "Friday",
+      "fraud_count": 61,
+      "total": 35496,
+      "fraud_rate": 0.172,
+      "order": 4
+    },
+    {
+      "day": "Saturday",
+      "fraud_count": 68,
+      "total": 35334,
+      "fraud_rate": 0.192,
+      "order": 5
+    },
+    {
+      "day": "Sunday",
+      "fraud_count": 75,
+      "total": 36003,
+      "fraud_rate": 0.208,
+      "order": 6
+    }
+  ],
+  "devices": [
+    {
+      "device": "Android",
+      "fraud_count": 364,
+      "total": 187777,
+      "fraud_rate": 0.194
+    },
+    {
+      "device": "Web",
+      "fraud_count": 26,
+      "total": 12610,
+      "fraud_rate": 0.206
+    },
+    {
+      "device": "iOS",
+      "fraud_count": 90,
+      "total": 49613,
+      "fraud_rate": 0.181
+    }
+  ],
+  "networks": [
+    {
+      "network": "3G",
+      "fraud_count": 24,
+      "total": 12471,
+      "fraud_rate": 0.192
+    },
+    {
+      "network": "4G",
+      "fraud_count": 282,
+      "total": 149813,
+      "fraud_rate": 0.188
+    },
+    {
+      "network": "5G",
+      "fraud_count": 115,
+      "total": 62582,
+      "fraud_rate": 0.184
+    },
+    {
+      "network": "WiFi",
+      "fraud_count": 59,
+      "total": 25134,
+      "fraud_rate": 0.235
+    }
+  ]
+}
