@@ -31,15 +31,16 @@ export default function ScamClassifier() {
       setResult(res)
     } catch {
       setResult({
-        prediction: "digital_arrest_scam",
-        confidence: 0.97,
+        label: "digital_arrest_scam",
+        confidence: 97.0,
         is_scam: true,
         all_scores: {
-          digital_arrest_scam: 97,
-          phishing: 12,
-          vishing: 8,
-          legitimate: 3,
+          digital_arrest_scam: 97.0,
+          phishing: 12.0,
+          vishing: 8.0,
+          legitimate: 3.0,
         },
+        explanation: "Model could not be reached. Sample result shown.",
       })
     }
     setLoading(false)
@@ -97,14 +98,20 @@ export default function ScamClassifier() {
                   <Badge variant={result.is_scam ? "danger" : "success"}>
                     {result.is_scam ? "Scam Detected" : "Legitimate"}
                   </Badge>
-                  <span className="text-xs text-[#64748b]">{result.prediction?.replace(/_/g, " ")}</span>
+                  <span className="text-xs text-[#64748b]">{result.label?.replace(/_/g, " ")}</span>
                 </div>
                 <div className="text-center mb-4">
                   <div className="text-4xl font-bold text-white mb-1">
-                    {result.confidence ? `${(result.confidence * 100).toFixed(1)}%` : 'N/A'}
+                    {result.confidence ? `${result.confidence.toFixed(1)}%` : 'N/A'}
                   </div>
                   <div className="text-sm text-[#64748b]">Confidence Score</div>
                 </div>
+
+                {result.explanation && (
+                  <div className="mb-4 p-3 bg-[#0f172a] rounded-md text-sm text-[#94a3b8] leading-relaxed">
+                    {result.explanation}
+                  </div>
+                )}
 
                 {result.all_scores && (
                   <div className="space-y-2">

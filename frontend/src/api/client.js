@@ -74,6 +74,19 @@ export const api = {
   voiceHealth: () =>
     fetchJSON(`${BASE}/voice/health`),
 
+  analyzeComplaint: (message, location, phoneNumber) =>
+    fetchJSON(`${BASE}/analyze-complaint`, {
+      method: "POST",
+      body: JSON.stringify({
+        message,
+        location:     location     || null,
+        phone_number: phoneNumber  || null,
+      })
+    }),
+
+  getPipelineStats: () =>
+    fetchJSON(`${BASE}/pipeline/stats`),
+
   checkAllHealth: async () => {
     const checks = await Promise.allSettled([
       fetchJSON(`${BASE}/health`),

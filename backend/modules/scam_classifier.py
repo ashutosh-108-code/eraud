@@ -24,6 +24,15 @@ LABELS = {
     3: "legitimate"
 }
 
+EXPLANATIONS = {
+    "digital_arrest_scam": "This message impersonates law enforcement (CBI/ED/police), threatens 'digital arrest', and demands money — classic government-impersonation scam tactics.",
+    "phishing": "This message contains urgent bank/account alerts, KYC/OTP demands, or suspicious links designed to steal personal information or credentials.",
+    "vishing": "This message offers fake prizes, lottery wins, job/loan approvals, or asks you to call back to claim rewards — typical vishing fraud lures.",
+    "legitimate": "No scam indicators detected. The message lacks impersonation, threats, urgent money/OTP demands, or suspicious links commonly used in fraud attempts.",
+}
+
+SCAM_CONFIDENCE_THRESHOLD = 70.0
+
 def classify_text(text: str) -> dict:
     inputs = tokenizer(
         text,
@@ -45,15 +54,23 @@ def classify_text(text: str) -> dict:
         for i in range(len(probs))
     }
 
+    is_scam = pred_label != "legitimate" and confidence >= SCAM_CONFIDENCE_THRESHOLD
+
+    if pred_label != "legitimate" and not is_scam:
+        pred_label = "legitimate"
+        confidence = round(100.0 - confidence, 1)
+
     return {
-        "label":      pred_label,
-        "confidence": confidence,
-        "is_scam":    pred_label != "legitimate",
-        "all_scores": all_scores
+        "label":           pred_label,
+        "confidence":      confidence,
+        "is_scam":         is_scam,
+        "all_scores":      all_scores,
+        "explanation":     EXPLANATIONS.get(pred_label, "No explanation available."),
     }
 
 def get_metrics() -> dict:
     return {
+        "accuracy":         0.9434,
         "overall_accuracy": 94.34,
         "total_samples":    13200,
         "languages":        ["English", "Hindi", "Hinglish"],

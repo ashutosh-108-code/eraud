@@ -17,8 +17,8 @@ def get_all() -> dict:
 def get_summary() -> dict:
     return HEATMAP_DATA["summary"]
 
-def get_states() -> dict:
-    return {"states": HEATMAP_DATA["states"]}
+def get_states() -> list:
+    return HEATMAP_DATA["states"]
 
 def get_state(state_name: str) -> dict:
     state = next(

@@ -111,6 +111,7 @@ async def get_chat_response(message: str, history: list) -> dict:
         "bert_analysis": {
             "label":      label,
             "confidence": confidence,
+            "is_scam":    is_scam,
             "all_scores": bert_result["all_scores"],
             "model_info": "Custom BERT - 13,200 Indian samples"
         }
