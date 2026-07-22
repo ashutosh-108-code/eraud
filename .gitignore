@@ -24,5 +24,8 @@ Thumbs.db
 # Pipeline data (ephemeral — persisted via Supabase)
 backend/pipeline_data/
 
-# Git LFS
-backend/models/scam_classifier/model.safetensors
+# ML models (large binaries — download separately)
+backend/models/
+
+# Vite cache
+frontend/node_modules/.vite/
