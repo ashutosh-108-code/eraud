@@ -1,1 +1,268 @@
-[]
+[
+  {
+    "complaint_id": "CMP20260722133407",
+    "timestamp": "2026-07-22T13:34:10.628819",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Maharashtra",
+    "phones": [
+      "9876543210"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722133548",
+    "timestamp": "2026-07-22T13:35:50.921142",
+    "label": "vishing",
+    "confidence": 99.8,
+    "state": "Delhi",
+    "phones": [],
+    "graph_updated": false,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722133751",
+    "timestamp": "2026-07-22T13:37:52.597223",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Maharashtra",
+    "phones": [
+      "9876543210"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722134755",
+    "timestamp": "2026-07-22T13:47:56.086878",
+    "label": "vishing",
+    "confidence": 99.6,
+    "state": null,
+    "phones": [
+      "9876543210"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722225938",
+    "timestamp": "2026-07-22T22:59:39.994895",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": null,
+    "phones": [
+      "9871364250"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722230132",
+    "timestamp": "2026-07-22T23:01:34.432645",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": null,
+    "phones": [
+      "9871364250"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722230449",
+    "timestamp": "2026-07-22T23:04:50.880720",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": null,
+    "phones": [
+      "9871364250"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722230520",
+    "timestamp": "2026-07-22T23:05:22.428869",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Delhi",
+    "phones": [
+      "8899001122"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722230537",
+    "timestamp": "2026-07-22T23:05:38.802589",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": null,
+    "phones": [
+      "8899001122"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722230700",
+    "timestamp": "2026-07-22T23:07:02.051297",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Bihar",
+    "phones": [
+      "8899001122"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722231133",
+    "timestamp": "2026-07-22T23:11:35.333468",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Bihar",
+    "phones": [
+      "8899001122"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722231825",
+    "timestamp": "2026-07-22T23:18:27.302565",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Delhi",
+    "phones": [
+      "8899001122"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722231846",
+    "timestamp": "2026-07-22T23:18:47.682432",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Bihar",
+    "phones": [],
+    "graph_updated": false,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722232138",
+    "timestamp": "2026-07-22T23:21:40.047414",
+    "label": "phishing",
+    "confidence": 99.8,
+    "state": null,
+    "phones": [],
+    "graph_updated": false,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722232151",
+    "timestamp": "2026-07-22T23:21:52.653527",
+    "label": "phishing",
+    "confidence": 99.6,
+    "state": null,
+    "phones": [],
+    "graph_updated": false,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722232200",
+    "timestamp": "2026-07-22T23:22:01.848189",
+    "label": "vishing",
+    "confidence": 99.8,
+    "state": "Bihar",
+    "phones": [],
+    "graph_updated": false,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722232211",
+    "timestamp": "2026-07-22T23:22:12.317450",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": null,
+    "phones": [],
+    "graph_updated": false,
+    "heatmap_updated": false,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722233053",
+    "timestamp": "2026-07-22T23:30:55.239366",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Delhi",
+    "phones": [
+      "8899001122"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722233356",
+    "timestamp": "2026-07-22T23:33:58.116130",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "state": "Delhi",
+    "phones": [
+      "8899001122"
+    ],
+    "graph_updated": true,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  },
+  {
+    "complaint_id": "CMP20260722233939",
+    "timestamp": "2026-07-22T23:39:40.224779",
+    "label": "vishing",
+    "confidence": 99.8,
+    "state": "Assam",
+    "phones": [],
+    "graph_updated": false,
+    "heatmap_updated": true,
+    "alert_generated": true,
+    "training_saved": true
+  }
+]

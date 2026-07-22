@@ -1,9 +1,9 @@
 {
   "summary": {
-    "total_transactions": 250000,
-    "total_fraud": 480,
+    "total_transactions": 250012,
+    "total_fraud": 492,
     "overall_fraud_rate": 0.192,
-    "states_affected": 10,
+    "states_affected": 12,
     "peak_fraud_hour": 19,
     "worst_state": "Maharashtra",
     "riskiest_age_group": "18-25",
@@ -32,17 +32,18 @@
     },
     {
       "sender_state": "Delhi",
-      "total_transactions": 24870,
-      "fraud_count": 50,
+      "total_transactions": 24875,
+      "fraud_count": 55,
       "total_amount": 32689865,
       "avg_amount": 1314.429634097306,
       "fraud_amount": 83675,
-      "fraud_rate": 0.201,
-      "risk_level": "high",
+      "fraud_rate": 0.221,
+      "risk_level": "medium",
       "lat": 28.7,
       "lng": 77.1,
       "top_fraud_type": "P2P",
-      "top_merchant_category": "Food"
+      "top_merchant_category": "Food",
+      "last_updated": "2026-07-22T23:33:56.784099"
     },
     {
       "sender_state": "Gujarat",
@@ -74,17 +75,18 @@
     },
     {
       "sender_state": "Maharashtra",
-      "total_transactions": 37427,
-      "fraud_count": 71,
+      "total_transactions": 37429,
+      "fraud_count": 73,
       "total_amount": 49043948,
       "avg_amount": 1310.3895049028777,
       "fraud_amount": 96259,
-      "fraud_rate": 0.19,
+      "fraud_rate": 0.195,
       "risk_level": "high",
       "lat": 19.75,
       "lng": 75.71,
       "top_fraud_type": "P2P",
-      "top_merchant_category": "Grocery"
+      "top_merchant_category": "Grocery",
+      "last_updated": "2026-07-22T13:37:51.652732"
     },
     {
       "sender_state": "Rajasthan",
@@ -155,6 +157,36 @@
       "lng": 87.85,
       "top_fraud_type": "P2P",
       "top_merchant_category": "Grocery"
+    },
+    {
+      "sender_state": "Bihar",
+      "total_transactions": 2,
+      "fraud_count": 2,
+      "total_amount": 0,
+      "avg_amount": 0,
+      "fraud_amount": 0,
+      "fraud_rate": 100.0,
+      "risk_level": "low",
+      "lat": 25.1,
+      "lng": 85.31,
+      "top_fraud_type": "digital_arrest_scam",
+      "top_merchant_category": "Unknown",
+      "last_updated": "2026-07-22T23:22:00.641174"
+    },
+    {
+      "sender_state": "Assam",
+      "total_transactions": 1,
+      "fraud_count": 1,
+      "total_amount": 0,
+      "avg_amount": 0,
+      "fraud_amount": 0,
+      "fraud_rate": 100.0,
+      "risk_level": "low",
+      "lat": 26.2,
+      "lng": 92.94,
+      "top_fraud_type": "vishing",
+      "top_merchant_category": "Unknown",
+      "last_updated": "2026-07-22T23:39:39.151709"
     }
   ],
   "hourly": [

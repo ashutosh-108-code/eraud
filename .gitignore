@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+backend/venv/
+
+# Environment
+.env
+backend/.env
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Pipeline data (ephemeral — persisted via Supabase)
+backend/pipeline_data/
+
+# Git LFS
+backend/models/scam_classifier/model.safetensors

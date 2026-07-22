@@ -26,3 +26,6 @@ networkx
 # HTTP
 httpx
 requests
+
+# Database
+supabase>=2.0,<3.0

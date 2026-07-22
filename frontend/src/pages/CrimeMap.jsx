@@ -87,9 +87,14 @@ export default function CrimeMap() {
   const [selectedState, setSelectedState] = useState(null)
 
   useEffect(() => {
-    api.getHeatmap()
-      .then(d => { setData(d); setLoading(false) })
-      .catch(() => { setData(FALLBACK_DATA); setLoading(false); setError(true) })
+    let cancelled = false
+    const fetchData = () =>
+      api.getHeatmap()
+        .then(d => { if (!cancelled) { setData(d); setLoading(false); setError(false) } })
+        .catch(() => { if (!cancelled) { setData(FALLBACK_DATA); setLoading(false); setError(true) } })
+    fetchData()
+    const interval = setInterval(fetchData, 15000)
+    return () => { cancelled = true; clearInterval(interval) }
   }, [])
 
   if (loading) {

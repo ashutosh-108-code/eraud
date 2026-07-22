@@ -17,6 +17,7 @@ from modules.fraud_shield import get_chat_response
 from modules.fraud_graph import get_network, get_stats, search_network, generate_report
 from modules.crime_map import get_all as get_heatmap_all, get_summary as get_heatmap_summary, get_states as get_heatmap_states, get_state as get_heatmap_state
 from modules.voice_analyzer import transcribe_and_analyze, get_mock_result
+from modules import db_adapter
 
 # ── Pipeline Configuration ─────────────────────────────────────
 
@@ -29,6 +30,26 @@ if not TRAINING_DATA_FILE.exists():
     TRAINING_DATA_FILE.write_text("[]")
 if not COMPLAINTS_LOG_FILE.exists():
     COMPLAINTS_LOG_FILE.write_text("[]")
+
+# Try to load persisted state from Supabase (seamless production data)
+if db_adapter.is_available():
+    network_supabase = db_adapter.load_app_state("network_data")
+    if network_supabase:
+        from modules.fraud_graph import NETWORK_DATA, DATA_PATH
+        NETWORK_DATA.clear()
+        NETWORK_DATA.update(network_supabase)
+        with open(DATA_PATH, "w") as f:
+            json.dump(NETWORK_DATA, f, indent=2)
+        print("Network data loaded from Supabase ✅")
+
+    heatmap_supabase = db_adapter.load_app_state("heatmap_data")
+    if heatmap_supabase:
+        from modules.crime_map import HEATMAP_DATA, DATA_PATH as HEATMAP_PATH
+        HEATMAP_DATA.clear()
+        HEATMAP_DATA.update(heatmap_supabase)
+        with open(HEATMAP_PATH, "w") as f:
+            json.dump(HEATMAP_DATA, f, indent=2)
+        print("Heatmap data loaded from Supabase ✅")
 
 app = FastAPI(
     title       = "Fraud Shield API",
@@ -87,21 +108,35 @@ def extract_phone_numbers(text: str) -> list:
 
 def detect_state_from_text(text: str) -> str:
     STATE_KEYWORDS = {
-        "Maharashtra":     ["maharashtra", "mumbai", "pune", "nagpur", "nashik", "thane"],
-        "Delhi":           ["delhi", "new delhi", "ncr", "noida", "gurgaon", "faridabad"],
-        "Karnataka":       ["karnataka", "bangalore", "bengaluru", "mysuru", "hubli"],
-        "Uttar Pradesh":   ["uttar pradesh", "lucknow", "kanpur", "agra", "varanasi", "allahabad"],
-        "Tamil Nadu":      ["tamil nadu", "chennai", "coimbatore", "madurai", "salem"],
-        "Gujarat":         ["gujarat", "ahmedabad", "surat", "vadodara", "rajkot"],
-        "Rajasthan":       ["rajasthan", "jaipur", "jodhpur", "udaipur", "kota"],
-        "West Bengal":     ["west bengal", "kolkata", "calcutta", "howrah", "siliguri"],
-        "Telangana":       ["telangana", "hyderabad", "warangal", "nizamabad"],
-        "Andhra Pradesh":  ["andhra pradesh", "visakhapatnam", "vijayawada", "guntur"],
-        "Jharkhand":       ["jharkhand", "ranchi", "jamshedpur", "dhanbad", "bokaro"],
-        "Bihar":           ["bihar", "patna", "gaya", "bhagalpur"],
-        "Madhya Pradesh":  ["madhya pradesh", "bhopal", "indore", "gwalior", "jabalpur"],
-        "Punjab":          ["punjab", "chandigarh", "ludhiana", "amritsar", "jalandhar"],
-        "Haryana":         ["haryana", "gurugram", "faridabad", "panipat", "ambala"],
+        "Andhra Pradesh":   ["andhra pradesh", "visakhapatnam", "vijayawada", "guntur", "nellore", "kurnool", "kakinada", "tirupati"],
+        "Arunachal Pradesh":["arunachal pradesh", "itanagar", "tawang", "namsai"],
+        "Assam":            ["assam", "guwahati", "dispur", "silchar", "jorhat", "dibrugarh"],
+        "Bihar":            ["bihar", "patna", "gaya", "bhagalpur", "muzaffarpur", "darbhanga", "purnia"],
+        "Chhattisgarh":     ["chhattisgarh", "raipur", "bilaspur", "bhilai", "korba", "raigarh"],
+        "Delhi":            ["delhi", "new delhi", "ncr", "noida", "gurgaon", "faridabad", "dwarka", "rohini"],
+        "Goa":              ["goa", "panaji", "panjim", "margao", "vasco", "ponda"],
+        "Gujarat":          ["gujarat", "ahmedabad", "surat", "vadodara", "rajkot", "bhavnagar", "jamnagar"],
+        "Haryana":          ["haryana", "gurugram", "faridabad", "panipat", "ambala", "hisar", "karnal", "sonipat"],
+        "Himachal Pradesh": ["himachal pradesh", "shimla", "manali", "dharamshala", "kullu", "mandi", "hamirpur"],
+        "Jharkhand":        ["jharkhand", "ranchi", "jamshedpur", "dhanbad", "bokaro", "deoghar", "hazaribagh"],
+        "Karnataka":        ["karnataka", "bangalore", "bengaluru", "mysuru", "hubli", "mangalore", "mangaluru", "belgaum", "davangere"],
+        "Kerala":           ["kerala", "kochi", "cochin", "trivandrum", "thiruvananthapuram", "kozhikode", "calicut", "kollam", "alappuzha"],
+        "Madhya Pradesh":   ["madhya pradesh", "bhopal", "indore", "gwalior", "jabalpur", "ujjain", "sagar", "rewa"],
+        "Maharashtra":      ["maharashtra", "mumbai", "pune", "nagpur", "nashik", "thane", "aurangabad", "solapur", "kolhapur", "navi mumbai"],
+        "Manipur":          ["manipur", "imphal", "bishnupur", "thoubal"],
+        "Meghalaya":        ["meghalaya", "shillong", "tura", "nongstoin"],
+        "Mizoram":          ["mizoram", "aizawl", "lunglei", "champhai"],
+        "Nagaland":         ["nagaland", "kohima", "dimapur", "mokokchung"],
+        "Odisha":           ["odisha", "orissa", "bhubaneswar", "bhubaneshwar", "cuttack", "rourkela", "puri", "sambalpur"],
+        "Punjab":           ["punjab", "chandigarh", "ludhiana", "amritsar", "jalandhar", "patiala", "bathinda", "mohali"],
+        "Rajasthan":        ["rajasthan", "jaipur", "jodhpur", "udaipur", "kota", "ajmer", "bikaner", "jaisalmer"],
+        "Sikkim":           ["sikkim", "gangtok", "namchi", "mangan"],
+        "Tamil Nadu":       ["tamil nadu", "chennai", "madras", "coimbatore", "madurai", "salem", "trichy", "tiruchirappalli", "tirunelveli"],
+        "Telangana":        ["telangana", "hyderabad", "secunderabad", "warangal", "nizamabad", "karimnagar", "khammam"],
+        "Tripura":          ["tripura", "agartala", "dharamnagar", "kailashahar"],
+        "Uttar Pradesh":    ["uttar pradesh", "lucknow", "kanpur", "agra", "varanasi", "allahabad", "prayagraj", "ghaziabad", "meerut", "noida", "bareilly", "aligarh", "moradabad"],
+        "Uttarakhand":      ["uttarakhand", "dehradun", "haridwar", "rishikesh", "nainital", "haldwani", "roorkee"],
+        "West Bengal":      ["west bengal", "kolkata", "calcutta", "howrah", "siliguri", "durgapur", "asansol", "bardhaman"],
     }
     text_lower = text.lower()
     for state, keywords in STATE_KEYWORDS.items():
@@ -161,6 +196,11 @@ def update_fraud_graph(phone_numbers: list, scam_type: str, complaint_id: str) -
     with open(DATA_PATH, "w") as f:
         json.dump(NETWORK_DATA, f, indent=2)
 
+    try:
+        db_adapter.save_app_state("network_data", NETWORK_DATA)
+    except Exception:
+        pass
+
     return {
         "updated": True,
         "nodes_added": nodes_added,
@@ -168,6 +208,38 @@ def update_fraud_graph(phone_numbers: list, scam_type: str, complaint_id: str) -
         "affected_ids": affected_ids,
         "phones_found": phone_numbers,
     }
+
+STATE_COORDS = {
+    "Andhra Pradesh":    [15.91, 79.73],
+    "Arunachal Pradesh": [27.00, 93.50],
+    "Assam":             [26.20, 92.94],
+    "Bihar":             [25.10, 85.31],
+    "Chhattisgarh":      [21.28, 81.63],
+    "Delhi":             [28.70, 77.10],
+    "Goa":               [15.49, 73.83],
+    "Gujarat":           [22.25, 71.19],
+    "Haryana":           [29.06, 76.09],
+    "Himachal Pradesh":  [31.10, 77.17],
+    "Jharkhand":         [23.61, 85.28],
+    "Karnataka":         [15.31, 75.71],
+    "Kerala":            [10.85, 76.27],
+    "Madhya Pradesh":    [23.47, 77.96],
+    "Maharashtra":       [19.75, 75.71],
+    "Manipur":           [24.66, 93.91],
+    "Meghalaya":         [25.47, 91.37],
+    "Mizoram":           [23.16, 92.94],
+    "Nagaland":          [25.67, 94.11],
+    "Odisha":            [20.95, 84.23],
+    "Punjab":            [30.90, 75.86],
+    "Rajasthan":         [27.02, 74.21],
+    "Sikkim":            [27.53, 88.51],
+    "Tamil Nadu":        [11.12, 78.65],
+    "Telangana":         [18.11, 79.01],
+    "Tripura":           [23.94, 91.98],
+    "Uttar Pradesh":     [26.84, 80.94],
+    "Uttarakhand":       [30.06, 79.02],
+    "West Bengal":       [22.98, 87.85],
+}
 
 def update_heatmap(state: str, scam_type: str) -> dict:
     if not state:
@@ -188,6 +260,25 @@ def update_heatmap(state: str, scam_type: str) -> dict:
         else:
             state_entry["risk_level"] = "low"
         state_entry["last_updated"] = datetime.now().isoformat()
+    else:
+        coords = STATE_COORDS.get(state, [20.0, 78.0])
+        state_entry = {
+            "sender_state": state,
+            "total_transactions": 1,
+            "fraud_count": 1,
+            "total_amount": 0,
+            "avg_amount": 0,
+            "fraud_amount": 0,
+            "fraud_rate": 100.0,
+            "risk_level": "low",
+            "lat": coords[0],
+            "lng": coords[1],
+            "top_fraud_type": scam_type,
+            "top_merchant_category": "Unknown",
+            "last_updated": datetime.now().isoformat(),
+        }
+        HEATMAP_DATA["states"].append(state_entry)
+        HEATMAP_DATA["summary"]["states_affected"] = len(HEATMAP_DATA["states"])
 
     HEATMAP_DATA["summary"]["total_fraud"] += 1
     HEATMAP_DATA["summary"]["total_transactions"] += 1
@@ -195,11 +286,16 @@ def update_heatmap(state: str, scam_type: str) -> dict:
     with open(HEATMAP_PATH, "w") as f:
         json.dump(HEATMAP_DATA, f, indent=2)
 
+    try:
+        db_adapter.save_app_state("heatmap_data", HEATMAP_DATA)
+    except Exception:
+        pass
+
     return {
         "updated": True,
         "state": state,
-        "new_count": state_entry["fraud_count"] if state_entry else None,
-        "risk_level": state_entry["risk_level"] if state_entry else None,
+        "new_count": state_entry["fraud_count"],
+        "risk_level": state_entry["risk_level"],
     }
 
 async def generate_alert(complaint_text: str, bert_result: dict, phone_numbers: list, state: str, complaint_id: str) -> dict:
@@ -309,6 +405,11 @@ def save_training_example(text: str, label: str, confidence: float, complaint_id
 
         with open(TRAINING_DATA_FILE, "w") as f:
             json.dump(existing, f, indent=2)
+
+        try:
+            db_adapter.save_training_example(new_example)
+        except Exception:
+            pass
 
         return {"saved": True, "total_examples": len(existing), "example_id": complaint_id}
 
@@ -491,6 +592,23 @@ async def analyze_complaint(req: ComplaintRequest):
         })
         with open(COMPLAINTS_LOG_FILE, "w") as f:
             json.dump(log, f, indent=2)
+
+        try:
+            db_adapter.save_complaint({
+                "complaint_id": complaint_id,
+                "timestamp": datetime.now().isoformat(),
+                "label": bert_result["label"],
+                "confidence": bert_result["confidence"],
+                "state": state,
+                "phones": phone_numbers,
+                "graph_updated": graph_update["updated"],
+                "heatmap_updated": heatmap_update["updated"],
+                "alert_generated": alert_result["success"],
+                "training_saved": training_result["saved"],
+            })
+        except Exception:
+            pass
+
     except Exception:
         pass
 

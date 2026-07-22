@@ -1,1 +1,182 @@
-[]
+[
+  {
+    "id": "CMP20260722133407",
+    "text": "CBI officer called from 9876543210. Said my Aadhaar number has been used in money laundering case. I am calling from Mumbai. He threatened digital arrest and asked me to transfer 50000 rupees immediately. Told me not to tell anyone.",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T13:34:10.626618"
+  },
+  {
+    "id": "CMP20260722133548",
+    "text": "Someone called me in Delhi saying I won a lottery of 50 lakh rupees. Asked me to pay 2000 rupees processing fee first.",
+    "label": "vishing",
+    "confidence": 99.8,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T13:35:50.899518"
+  },
+  {
+    "id": "CMP20260722133751",
+    "text": "CBI officer called from 9876543210. Threatening digital arrest. Said my Aadhaar used in crime. Calling from Pune.",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T13:37:52.596111"
+  },
+  {
+    "id": "CMP20260722134755",
+    "text": "113 9876543210 \u0928\u0902\u092c\u0930 \u0938\u0947 CBI \u0905\u0927\u093f\u0915\u093e\u0930\u0940 \u0915\u093e \u092b\u093c\u094b\u0928 \u0906\u092f\u093e\u0964 \u0909\u0928\u094d\u0939\u094b\u0902\u0928\u0947 \u0921\u093f\u091c\u093f\u091f\u0932 \u0905\u0930\u0947\u0938\u094d\u091f \u0915\u0940 \u0927\u092e\u0915\u0940 \u0926\u0940 \u0914\u0930 \u0915\u0939\u093e \u0915\u093f \u092e\u0947\u0930\u0947 \u0906\u0927\u093e\u0930 \u0915\u093e \u0907\u0938\u094d\u0924\u0947\u092e\u093e\u0932 \u0915\u093f\u0938\u0940 \u0905\u092a\u0930\u093e\u0927 \u092e\u0947\u0902 \u0939\u0941\u0906 \u0939\u0948\u0964 \u0935\u0947 \u092a\u0941\u0923\u0947 \u0938\u0947 \u092b\u093c\u094b\u0928 \u0915\u0930 \u0930\u0939\u0947 \u0925\u0947\u0964",
+    "label": "vishing",
+    "confidence": 99.6,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T13:47:56.085085"
+  },
+  {
+    "id": "CMP20260722225938",
+    "text": "\"Beta, mujhe aaj WhatsApp pe ek ajeeb message aaya hai. Usme likha hai ki woh Cyber Crime Department se bol rahe hain. Keh rahe hain ki mere naam se GOA meh  koi illegal parcel aur bank account ka case chal raha hai. Agar maine turant verify nahi kiya toh mujhe 'Digital Arrest' kar diya jayega.  Message mein bola hai ki main is number 9871364250 par turant call karun. Mujhe bahut darr lag raha hai. Kya yeh sach ho sakta hai? Mujhe kya karna chahiye?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T22:59:39.992018"
+  },
+  {
+    "id": "CMP20260722230132",
+    "text": "\"Beta, mujhe aaj WhatsApp pe ek ajeeb message aaya hai. Usme likha hai ki woh Cyber Crime Department se bol rahe hain. Keh rahe hain ki mere naam se GOA state  meh  koi illegal parcel aur bank account ka case chal raha hai. Agar maine turant verify nahi kiya toh mujhe 'Digital Arrest' kar diya jayega.  Message mein bola hai ki main is number 9871364250 par turant call karun. Mujhe bahut darr lag raha hai. Kya yeh sach ho sakta hai? Mujhe kya karna chahiye?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:01:34.430040"
+  },
+  {
+    "id": "CMP20260722230449",
+    "text": "\"Beta, mujhe aaj WhatsApp pe ek ajeeb message aaya hai. Usme likha hai ki woh Cyber Crime Department se bol rahe hain. I am talking from GOA  Keh rahe hain ki mere naam se koi illegal parcel aur bank account ka case chal raha hai. Agar maine turant verify nahi kiya toh mujhe 'Digital Arrest' kar diya jayega.  Message mein bola hai ki main is number 9871364250 par turant call karun. Mujhe bahut darr lag raha hai. Kya yeh sach ho sakta hai? Mujhe kya karna chahiye?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:04:50.876586"
+  },
+  {
+    "id": "CMP20260722230520",
+    "text": "Mujhe kal raat ek call aaya. Caller ne bola ki woh ED officer hai aur mera bank account money laundering mein use hua hai. Usne bola ki agar maine 50000 rupaye transfer nahi kiye toh mujhe arrest kar lenge. Number tha 8899001122. Main Delhi mein rehta hoon. Kya yeh scam hai?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:05:22.426413"
+  },
+  {
+    "id": "CMP20260722230537",
+    "text": "Mujhe kal raat ek call aaya. Caller ne bola ki woh ED officer hai aur mera bank account money laundering mein use hua hai. Usne bola ki agar maine 50000 rupaye transfer nahi kiye toh mujhe arrest kar lenge. Number tha 8899001122. Main GOA mein rehta hoon. Kya yeh scam hai?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:05:38.799650"
+  },
+  {
+    "id": "CMP20260722230700",
+    "text": "Mujhe kal raat ek call aaya. Caller ne bola ki woh ED officer hai aur mera bank account money laundering mein use hua hai. Usne bola ki agar maine 50000 rupaye transfer nahi kiye toh mujhe arrest kar lenge. Number tha 8899001122. Main Bihar mein rehta hoon. Kya yeh scam hai?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:07:02.048452"
+  },
+  {
+    "id": "CMP20260722231133",
+    "text": "Mujhe kal raat ek call aaya. Caller ne bola ki woh ED officer hai aur mera bank account money laundering mein use hua hai. Usne bola ki agar maine 50000 rupaye transfer nahi kiye toh mujhe arrest kar lenge. Number tha 8899001122. Main Bihar mein rehta hoon. Kya yeh scam hai?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:11:35.329382"
+  },
+  {
+    "id": "CMP20260722231825",
+    "text": "Mujhe kal raat ek call aaya. Caller ne bola ki woh ED officer hai aur mera bank account money laundering mein use hua hai. Usne bola ki agar maine 50000 rupaye transfer nahi kiye toh mujhe arrest kar lenge. Number tha 8899001122. Main Delhi mein rehta hoon. Kya yeh scam hai?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:18:27.300551"
+  },
+  {
+    "id": "CMP20260722231846",
+    "text": "I got a call from someone saying my nephew is kidnapped and they want 50000 rupees. I am from Bihar, Patna.",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:18:47.679861"
+  },
+  {
+    "id": "CMP20260722232138",
+    "text": "I am from Guwahati, Assam and someone called me saying my KYC is expired and I need to update my SBI account details or it will be blocked.",
+    "label": "phishing",
+    "confidence": 99.8,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:21:40.032208"
+  },
+  {
+    "id": "CMP20260722232151",
+    "text": "I am from Guwahati, Assam and someone called me saying my KYC is expired.",
+    "label": "phishing",
+    "confidence": 99.6,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:21:52.633362"
+  },
+  {
+    "id": "CMP20260722232200",
+    "text": "I got a call in Patna, Bihar about a lottery winning.",
+    "label": "vishing",
+    "confidence": 99.8,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:22:01.838387"
+  },
+  {
+    "id": "CMP20260722232211",
+    "text": "I am from Assam and I got a scam call.",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:22:12.302501"
+  },
+  {
+    "id": "CMP20260722233053",
+    "text": "Mujhe kal raat ek call aaya. Caller ne bola ki woh ED officer hai aur mera bank account money laundering mein use hua hai. Usne bola ki agar maine 50000 rupaye transfer nahi kiye toh mujhe arrest kar lenge. Number tha 8899001122. Main Delhi mein rehta hoon. Kya yeh scam hai?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:30:55.227786"
+  },
+  {
+    "id": "CMP20260722233356",
+    "text": "Mujhe kal raat ek call aaya. Caller ne bola ki woh ED officer hai aur mera bank account money laundering mein use hua hai. Usne bola ki agar maine 50000 rupaye transfer nahi kiye toh mujhe arrest kar lenge. Number tha 8899001122. Main Delhi mein rehta hoon. Kya yeh scam hai?",
+    "label": "digital_arrest_scam",
+    "confidence": 100.0,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:33:58.110334"
+  },
+  {
+    "id": "CMP20260722233939",
+    "text": "I am from Assam and I got a call about a lottery winning.",
+    "label": "vishing",
+    "confidence": 99.8,
+    "source": "citizen_complaint",
+    "verified": true,
+    "timestamp": "2026-07-22T23:39:40.221941"
+  }
+]
