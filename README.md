@@ -5,6 +5,16 @@
 
 #  Fraud Shield — AI-Powered Digital Public Safety Intelligence Platform
 
+## Installation
+
+This repository uses **Git LFS (Large File Storage)** to manage the model weights (`model.safetensors`). 
+
+Before cloning, ensure you have Git LFS installed:
+1. Download and install it from [git-lfs.com](https://git-lfs.com)
+2. Set it up globally: `git lfs install`
+3. Clone the repo normally: `git clone https://github.com`
+
+
 An AI-powered platform that equips **citizens, financial institutions, and law enforcement** with proactive tools to detect, disrupt, and respond to digital fraud. Combines a fine-tuned **BERT** classifier, **Groq LLM**, **network graph intelligence**, and **geographic heatmaps** into a single unified dashboard.
 
 ---
