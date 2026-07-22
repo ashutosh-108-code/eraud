@@ -1,0 +1,31 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+pydantic
+
+# ML / NLP
+torch
+transformers
+accelerate
+
+# Audio
+assemblyai
+groq
+
+# Vision
+pillow
+
+# Data
+pandas
+numpy
+
+# Graph
+networkx
+
+# HTTP
+httpx
+requests
+
+# Database
+supabase>=2.0,<3.0
