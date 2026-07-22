@@ -3,35 +3,35 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
 </div>
 
-# 🛡️ Fraud Shield — AI-Powered Digital Public Safety Intelligence Platform
+#  Fraud Shield — AI-Powered Digital Public Safety Intelligence Platform
 
 An AI-powered platform that equips **citizens, financial institutions, and law enforcement** with proactive tools to detect, disrupt, and respond to digital fraud. Combines a fine-tuned **BERT** classifier, **Groq LLM**, **network graph intelligence**, and **geographic heatmaps** into a single unified dashboard.
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🤖 Kavach Chatbot
+###  Kavach Chatbot
 Describe suspicious calls or messages in English or Hinglish — get an instant verdict, risk score, red flags, and recommended actions. Powered by a hybrid BERT + Groq LLM pipeline.
 
-### 🎙️ Voice Analyzer
+###  Voice Analyzer
 Upload or record suspicious audio calls. Automatic transcription via AssemblyAI followed by scam analysis with risk scoring.
 
-### 🧠 Scam Classifier
+###  Scam Classifier
 Paste any message text and get a 4-class BERT classification (`digital_arrest_scam`, `phishing`, `vishing`, `legitimate`) with confidence scores.
 
-### 🕸️ Fraud Network Graph
+###  Fraud Network Graph
 Visualise organised fraud rings (mastermind → operator → mule → SIM → victim) with force-directed graphs. Search by phone number and generate intelligence reports.
 
-### 🗺️ Crime Map (India)
+###  Crime Map (India)
 Interactive Leaflet map with color-coded circle markers per state showing fraud volume and risk level. Includes multi-dimensional analytics (hourly trends, age groups, banks, merchant categories, devices, networks).
 
-### 📊 Dashboard
+###  Dashboard
 Live activity feed, animated stat counters, model performance metrics, and geographic hotspot summaries.
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -47,7 +47,7 @@ Live activity feed, animated stat counters, model performance metrics, and geogr
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Python 3.10+
@@ -127,7 +127,7 @@ fraud-shield/
 
 ---
 
-## 🌐 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -146,7 +146,7 @@ fraud-shield/
 
 ---
 
-## 📊 Pages
+## Pages
 
 | Route | Page | Description |
 |---|---|---|
@@ -159,7 +159,7 @@ fraud-shield/
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 1. **User submits a message** via the chatbot or classifier
 2. **BERT model** classifies it into one of 4 categories (94.34% accuracy)
@@ -171,6 +171,6 @@ fraud-shield/
 
 ---
 
-## 📜 License
+## License
 
 MIT
