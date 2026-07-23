@@ -181,6 +181,3 @@ fraud-shield/
 
 ---
 
-## License
-
-MIT
